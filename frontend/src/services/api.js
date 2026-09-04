@@ -1,4 +1,4 @@
-const PRIMARY_API_BASE = import.meta.env?.VITE_API_BASE_URL || 'http://localhost:8000/api/v1';
+const PRIMARY_API_BASE = import.meta.env?.VITE_API_BASE_URL || (import.meta.env.PROD ? '/api/v1' : 'http://localhost:8000/api/v1');
 
 /** Returns the stored API auth token (set at login time). */
 function getAuthToken() {
